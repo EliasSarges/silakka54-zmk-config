@@ -15,13 +15,13 @@ jobs:
             shield: silakka54_right
     steps:
       - name: Checkout ZMK
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: zmkfirmware/zmk
           ref: main
 
       - name: Checkout user config
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: config
 
@@ -29,7 +29,7 @@ jobs:
         run: west build -s zmk/app -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }}
 
       - name: Archive firmware
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-${{ matrix.shield }}
           path: build/zephyr/zmk.uf2
