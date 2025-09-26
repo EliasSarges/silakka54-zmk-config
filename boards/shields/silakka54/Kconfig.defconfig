@@ -1,16 +1,2 @@
-if SHIELD_SILAKKA54
-config ZMK_KEYBOARD_NAME
-    default "Silakka54"
-
-config ZMK_SPLIT
-    default y
-
-config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-    default 1
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
-
+CONFIG_ZMK_KEYMAP_HAS_MATRIX_TRANSFORM=y
+CONFIG_ZMK_KEYMAP_HAS_KSCAN=y

@@ -1,0 +1,10 @@
+file_format: "1"
+id: silakka54
+name: Silakka54
+type: shield
+url: https://github.com/EliasSarges/silakka54-zmk-config
+requires:
+  - nice_nano_v2
+features:
+  - keys
+  - underglow
