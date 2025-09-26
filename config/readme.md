@@ -1,0 +1,3 @@
+# aqui vai os dois arquivos de configurações pessoais:
+- silakka54.keymap : mapeamento de teclas
+- silakka54.conf : configurações de hardware, tempo de suspensão e etc...

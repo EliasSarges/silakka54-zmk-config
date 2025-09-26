@@ -1,0 +1,4 @@
+config SHIELD_SILAKKA54
+    def_bool $(shields_list_contains,silakka54)
+
+
