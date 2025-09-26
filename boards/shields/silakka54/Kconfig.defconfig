@@ -1,2 +1,40 @@
-CONFIG_ZMK_KEYMAP_HAS_MATRIX_TRANSFORM=y
-CONFIG_ZMK_KEYMAP_HAS_KSCAN=y
+if SHIELD_SILAKKA54
+    config ZMK_KEYBOARD_NAME
+        default "Silakka54"
+
+    config ZMK_SPLIT
+        default y
+
+    config ZMK_SPLIT_BLE
+        default y
+
+    config ZMK_SPLIT_CENTRAL_IS_LEFT
+        default y
+
+    config ZMK_BLE_CLEAR_BONDS_ON_START
+        default y
+
+    config ZMK_SLEEP
+        default y
+
+    config ZMK_IDLE_SLEEP_TIMEOUT
+        default 1800000
+
+    config ZMK_EXT_POWER
+        default y
+
+    config ZMK_BATTERY_REPORTING
+        default y
+
+    config ZMK_WIDGET_BATTERY_STATUS
+        default y
+
+    config ZMK_WIDGET_LAYER_STATUS
+        default y
+
+    config ZMK_KEYMAP_HAS_MATRIX_TRANSFORM
+        default y
+
+    config ZMK_KEYMAP_HAS_KSCAN
+        default y
+endif

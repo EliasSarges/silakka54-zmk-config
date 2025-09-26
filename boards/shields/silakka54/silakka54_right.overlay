@@ -7,11 +7,6 @@
         zmk,physical-layout = &default_layout;
     };
 
-    model_info {
-        compatible = "zmk,keymap-sensory-info";
-        sensors = <&kscan1>;
-    };
-
     kscan1: kscan_1 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
