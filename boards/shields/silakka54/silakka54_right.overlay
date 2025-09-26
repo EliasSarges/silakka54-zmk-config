@@ -1,6 +1,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+    chosen {
+        zmk,kscan = &kscan1;
+        zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &default_layout;
+    };
+
     model_info {
         compatible = "zmk,keymap-sensory-info";
         sensors = <&kscan1>;
