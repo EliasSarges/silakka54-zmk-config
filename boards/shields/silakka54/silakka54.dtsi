@@ -1,7 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-
 / {
     compatible = "silakka54,silakka54";
+
+    chosen {
+        zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &default_layout;
+    };
 
     default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
@@ -26,4 +30,4 @@
             56 57 58 59 60 61 62 63 64 65 66 67 68 69
         >;
     };
-};
+    };
