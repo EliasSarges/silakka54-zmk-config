@@ -3,33 +3,8 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    container:
-      image: zmkfirmware/zmk-build-arm:stable
-    strategy:
-      matrix:
-        include:
-          - board: nice_nano_v2
-            shield: silakka54_left
-          - board: nice_nano_v2
-            shield: silakka54_right
-    steps:
-      - name: Checkout ZMK
-        uses: actions/checkout@v4
-        with:
-          repository: zmkfirmware/zmk
-          ref: main
-
-      - name: Checkout user config
-        uses: actions/checkout@v4
-        with:
-          path: config
-
-      - name: Build
-        run: west build -s zmk/app -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }}
-
-      - name: Archive firmware
-        uses: actions/upload-artifact@v4
-        with:
-          name: firmware-${{ matrix.shield }}
-          path: build/zephyr/zmk.uf2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_shields: |
+        nice_nano_v2_silakka54_left
+        nice_nano_v2_silakka54_right
