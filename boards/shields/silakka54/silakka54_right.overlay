@@ -3,10 +3,10 @@
 / {
     model_info {
         compatible = "zmk,keymap-sensory-info";
-        sensors = <&kscan0>;
+        sensors = <&kscan1>;
     };
 
-    kscan0: kscan_0 {
+    kscan1: kscan_1 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         row-gpios
@@ -27,5 +27,3 @@
             ;
     };
 };
-
-
